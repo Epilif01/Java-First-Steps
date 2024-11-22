@@ -21,6 +21,7 @@ class Book {
     public void borrow(){
         if (!isBorrowed){
             isBorrowed = true;
+            System.out.println("Book borrowed successfully!");
         } else{
             System.out.println("Can't borrow a book that is already borrowed!");
         }
@@ -29,6 +30,7 @@ class Book {
     public void returnBook(){
         if (isBorrowed){
             isBorrowed = false;
+            System.out.println("Book returned successfully!");
         } else {
             System.out.println("Can't return a book that was not borrowed!");
         }

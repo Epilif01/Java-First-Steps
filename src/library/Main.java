@@ -9,38 +9,34 @@ public class Main {
         Library myLibrary = new Library();
         System.out.println("Library Created. Type any key to continue...");
         scanner.nextLine();
+        
         myLibrary.addBook(new Book("Java Intro", "GPT"));
-        System.out.println("Type any key to continue...");
-        scanner.nextLine();
+        pause(scanner);
         myLibrary.addBook(new Book("Fiction", "Tigas"));
-        System.out.println("Type any key to continue...");
-        scanner.nextLine();
+        pause(scanner);
         myLibrary.addBook(new Book("Sol", "Chuva"));
-        System.out.println("Type any key to continue...");
-        scanner.nextLine();
+        pause(scanner);
         myLibrary.addBook(new Book("Java Intro", "GPT")); //will not be added because it already exists.
-        System.out.println("Type any key to continue...");
-        scanner.nextLine();
+        pause(scanner);
 
         myLibrary.borrowBook("Sol");
-        System.out.println("Type any key to continue...");
-        scanner.nextLine();
+        pause(scanner);
         myLibrary.borrowBook("Fiction");
-        System.out.println("Type any key to continue...");
-        scanner.nextLine();
+        pause(scanner);
         myLibrary.borrowBook("Sol");
-        System.out.println("Type any key to continue...");
-        scanner.nextLine();
+        pause(scanner);
         myLibrary.borrowBook("Salazar");
-        System.out.println("Type any key to continue...");
-        scanner.nextLine();
+        pause(scanner);
         myLibrary.returnBook("Sol");
-        System.out.println("Type any key to continue...");
-        scanner.nextLine();
+        pause(scanner);
         myLibrary.returnBook("Fiction");
 
         scanner.close();
 
 
+    }
+    private static void pause(Scanner scanner){
+        System.out.println("Type any key to continue...");
+        scanner.nextLine();
     }
 }
